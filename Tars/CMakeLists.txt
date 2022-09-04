@@ -1,16 +1,18 @@
 set(TARS_SOURCES
 	"src/Tars.cpp"
+	"src/VulkanUtilities/ValidationLayerInfo.cpp"
 	"src/VulkanUtilities/VulkanBackend.cpp"
 	"src/VulkanUtilities/VulkanInstance.cpp"
-	"src/VulkanUtilities/VulkanPhysicalDevice.cpp"
+	"src/VulkanUtilities/VulkanDevice.cpp"
 	"src/Window.cpp"
 )
 
 set(TARS_HEADERS
 	"include/Tars/Tars.h"
+	"include/Tars/VulkanUtilities/ValidationLayerInfo.h"
 	"include/Tars/VulkanUtilities/VulkanBackend.h"
 	"include/Tars/VulkanUtilities/VulkanInstance.h"
-	"include/Tars/VulkanUtilities/VulkanPhysicalDevice.h"
+	"include/Tars/VulkanUtilities/VulkanDevice.h"
 	"include/Tars/Window.h"
 )
 

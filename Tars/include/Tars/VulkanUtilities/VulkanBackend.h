@@ -1,13 +1,13 @@
 #pragma once
 
 #include <Tars/VulkanUtilities/VulkanInstance.h>
-#include <Tars/VulkanUtilities/VulkanPhysicalDevice.h>
+#include <Tars/VulkanUtilities/VulkanDevice.h>
 
 namespace TarsEngine {
 	class VulkanBackend {
 	private:
 		VulkanInstance m_vulkanInstance;
-		VulkanPhysicalDevice m_vulkanPhysicalDevice;
+		VulkanDevice m_vulkanDevice;
 
 	public:
 		VulkanBackend(std::string_view applicationName);

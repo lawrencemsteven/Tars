@@ -2,6 +2,4 @@
 
 int main() {
 	Tars* tars = Tars::getInstance();
-
-	tars->initialize("Tars_App");
 }
