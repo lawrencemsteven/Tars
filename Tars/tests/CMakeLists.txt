@@ -5,7 +5,6 @@ set(TARS_UNIT_TESTS_SOURCES
 add_executable(Tars_unit_tests ${TARS_UNIT_TESTS_SOURCES})
 
 target_link_libraries(Tars_unit_tests PRIVATE Tars Catch2::Catch2WithMain)
-target_include_directories(Tars_unit_tests PRIVATE ${CATCH2_INCLUDE_DIRS})
 
 target_compile_features(Tars_unit_tests PRIVATE cxx_std_20)
 enable_testing()
