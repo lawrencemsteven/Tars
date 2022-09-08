@@ -1,6 +1,8 @@
 #include <Tars/VulkanUtilities/ValidationLayerInfo.h>
 
 namespace TarsEngine::ValidationLayers {
+	bool enabled = false;
+
 	VkResult CreateDebugUtilsMessengerEXT(VkInstance instance,
 										  const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo,
 										  const VkAllocationCallbacks* pAllocator,

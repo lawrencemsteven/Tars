@@ -19,5 +19,6 @@ void Tars::enableValidationLayers() {
 		throw std::runtime_error(
 			"Validation Layers can not be enabled after intialization of Tars!");
 	}
+
 	TarsEngine::ValidationLayers::enabled = true;
 }
