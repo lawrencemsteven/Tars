@@ -4,14 +4,8 @@ bool Tars::m_initialized = false;
 
 Tars::Tars(std::string_view applicationName)
 	: m_applicationName{applicationName},
-	  m_vulkanBackend{m_applicationName} {}
-
-Tars* Tars::getInstance(std::string_view applicationName) {
-	static Tars tars{applicationName};
-
+	  m_vulkanBackend{m_applicationName} {
 	m_initialized = true;
-
-	return &tars;
 }
 
 void Tars::enableValidationLayers() {

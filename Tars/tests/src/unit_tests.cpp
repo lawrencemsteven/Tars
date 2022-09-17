@@ -4,5 +4,5 @@
 
 TEST_CASE("Test Case") {
 	Tars::enableValidationLayers();
-	[[maybe_unused]] Tars* tars = Tars::getInstance("Tars Test Initialization");
+	[[maybe_unused]] Tars tars{"Tars Unit Tests"};
 }
