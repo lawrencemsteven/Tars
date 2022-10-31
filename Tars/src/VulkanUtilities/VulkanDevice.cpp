@@ -8,6 +8,7 @@ namespace TarsEngine {
 	}
 
 	VulkanDevice::~VulkanDevice() {
+		vkDeviceWaitIdle(m_device);
 		vkDestroyDevice(m_device, nullptr);
 	}
 
