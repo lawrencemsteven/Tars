@@ -4,7 +4,8 @@ set(TARS_SOURCES
 	"src/VulkanUtilities/VulkanBackend.cpp"
 	"src/VulkanUtilities/VulkanInstance.cpp"
 	"src/VulkanUtilities/VulkanDevice.cpp"
-	"src/Window.cpp"
+	"src/Window/Input/InputManager.cpp"
+	"src/Window/Window.cpp"
 )
 
 set(TARS_HEADERS
@@ -13,7 +14,9 @@ set(TARS_HEADERS
 	"include/Tars/VulkanUtilities/VulkanBackend.h"
 	"include/Tars/VulkanUtilities/VulkanInstance.h"
 	"include/Tars/VulkanUtilities/VulkanDevice.h"
-	"include/Tars/Window.h"
+	"include/Tars/Window/Input/InputManager.h"
+	"include/Tars/Window/Input/InputTypes.h"
+	"include/Tars/Window/Window.h"
 )
 
 add_library(Tars STATIC ${TARS_SOURCES} ${TARS_HEADERS})

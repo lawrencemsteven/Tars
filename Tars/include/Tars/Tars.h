@@ -5,11 +5,12 @@
 
 #include <Tars/VulkanUtilities/VulkanBackend.h>
 #include <Tars/VulkanUtilities/ValidationLayerInfo.h>
-#include <Tars/Window.h>
+#include <Tars/Window/Window.h>
 
 class Tars {
 private:
 	std::string_view m_applicationName;
+	TarsEngine::Window m_window;
 	TarsEngine::VulkanBackend m_vulkanBackend;
 
 	static bool m_initialized;
@@ -33,4 +34,15 @@ public:
 	 * Enable Vulkan Validation Layers for the application
 	 */
 	static void enableValidationLayers();
+
+	/**
+	 * Whether or not the application should close
+	 * @return whether or not the application should close
+	 */
+	bool shouldClose();
+
+	/**
+	 * Poll events in the system
+	 */
+	void pollEvents();
 };
