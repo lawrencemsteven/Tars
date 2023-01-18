@@ -1,21 +1,21 @@
 set(TARS_SOURCES
-	"src/Tars.cpp"
+	"src/TarsEngine.cpp"
+	"src/Input/InputManager.cpp"
 	"src/VulkanUtilities/ValidationLayerInfo.cpp"
 	"src/VulkanUtilities/VulkanBackend.cpp"
 	"src/VulkanUtilities/VulkanInstance.cpp"
 	"src/VulkanUtilities/VulkanDevice.cpp"
-	"src/Window/Input/InputManager.cpp"
 	"src/Window/Window.cpp"
 )
 
 set(TARS_HEADERS
-	"include/Tars/Tars.h"
+	"include/Tars/TarsEngine.h"
+	"include/Tars/Input/InputManager.h"
+	"include/Tars/Input/InputTypes.h"
 	"include/Tars/VulkanUtilities/ValidationLayerInfo.h"
 	"include/Tars/VulkanUtilities/VulkanBackend.h"
 	"include/Tars/VulkanUtilities/VulkanInstance.h"
 	"include/Tars/VulkanUtilities/VulkanDevice.h"
-	"include/Tars/Window/Input/InputManager.h"
-	"include/Tars/Window/Input/InputTypes.h"
 	"include/Tars/Window/Window.h"
 )
 

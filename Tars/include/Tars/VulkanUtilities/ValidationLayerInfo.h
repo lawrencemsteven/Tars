@@ -5,7 +5,7 @@
 
 #include <vulkan/vulkan.h>
 
-namespace TarsEngine::ValidationLayers {
+namespace TarsBackend::ValidationLayers {
 	extern bool enabled;
 
 	const std::vector<const char*> validationLayers = {"VK_LAYER_KHRONOS_validation"};
