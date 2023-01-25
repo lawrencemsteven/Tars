@@ -9,9 +9,9 @@ namespace Tars {
 		Application();
 		virtual ~Application();
 
-		void Run();
+		void run();
 	};
 
 	// To be defined in client
-	Application* CreateApplication();
+	Application* createApplication();
 }

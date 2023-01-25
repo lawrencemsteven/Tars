@@ -11,6 +11,6 @@ public:
 	}
 };
 
-Tars::Application* Tars::CreateApplication() {
+Tars::Application* Tars::createApplication() {
 	return new TarsApp();
 }

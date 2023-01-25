@@ -1,5 +1,6 @@
-set(EXTERNAL
-    "./src/Tars.h"
+set(APPLICATION_FILES
+    "./src/Tars/Application.h"
+    "./src/Tars/Application.cpp"
 )
 
 set(CORE
@@ -10,14 +11,19 @@ set(ENTRY_POINT
     "./src/Tars/EntryPoint.h"
 )
 
-set(APPLICATION_FILES
-    "./src/Tars/Application.h"
-    "./src/Tars/Application.cpp"
+set(EXTERNAL
+    "./src/Tars.h"
+)
+
+set(LOGGING
+    "./src/Tars/log.h"
+    "./src/Tars/log.cpp"
 )
 
 set(TARS_FILES
-    ${EXTERNAL}
+    ${APPLICATION_FILES}
     ${CORE}
     ${ENTRY_POINT}
-    ${APPLICATION_FILES}
+    ${EXTERNAL}
+    ${LOGGING}
 )

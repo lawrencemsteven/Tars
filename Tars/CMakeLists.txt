@@ -11,6 +11,8 @@ target_link_libraries(Tars
 		Vulkan::Vulkan
 		glm::glm
 		glfw
+	PUBLIC
+		spdlog::spdlog
 )
 
 target_include_directories(Tars

@@ -1,21 +1,14 @@
 #pragma once
 
-#ifdef _MSC_VER // VS
-extern Tars::Application* Tars::CreateApplication();
+extern Tars::Application* Tars::createApplication();
 
 int main(int argc, char** argv) {
-	auto app = Tars::CreateApplication();
-	app->Run();
-	delete app;
-}
-#elif __GNUC__ // GCC
-extern Tars::Application* Tars::CreateApplication();
+	Tars::Log::init();
+	TARS_CORE_WARN("Initialized Log!");
+	int a = 5;
+	TARS_INFO("Hello! Var={0}", a);
 
-int main(int argc, char** argv) {
-	auto app = Tars::CreateApplication();
-	app->Run();
+	auto app = Tars::createApplication();
+	app->run();
 	delete app;
 }
-#else
-	#error Tars does not support your compiler!
-#endif
