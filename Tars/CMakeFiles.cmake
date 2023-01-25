@@ -1,29 +1,25 @@
-set(APPLICATION_FILES
-    "./src/Tars/Application.h"
-    "./src/Tars/Application.cpp"
+set(TARS_EVENTS
+    "./src/Tars/Events/ApplicationEvent.h"
+    "./src/Tars/Events/Event.h"
+    "./src/Tars/Events/KeyEvent.h"
+    "./src/Tars/Events/MouseEvent.h"
 )
 
-set(CORE
-    "./src/Tars/Core.h"
-)
-
-set(ENTRY_POINT
-    "./src/Tars/EntryPoint.h"
-)
-
-set(EXTERNAL
+set(TARS_EXTERNAL
     "./src/Tars.h"
 )
 
-set(LOGGING
+set(TARS_MAIN
+    "./src/Tars/Application.h"
+    "./src/Tars/Application.cpp"
+    "./src/Tars/Core.h"
+    "./src/Tars/EntryPoint.h"
     "./src/Tars/log.h"
     "./src/Tars/log.cpp"
 )
 
 set(TARS_FILES
-    ${APPLICATION_FILES}
-    ${CORE}
-    ${ENTRY_POINT}
-    ${EXTERNAL}
-    ${LOGGING}
+    ${TARS_EXTERNAL}
+    ${TARS_EVENTS}
+    ${TARS_MAIN}
 )

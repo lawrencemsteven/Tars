@@ -1,7 +1,9 @@
 #include <Tars/Log.h>
 
+#include <spdlog/sinks/stdout_color_sinks.h>
+
 namespace Tars {
-	
+
 	std::shared_ptr<spdlog::logger> Log::s_coreLogger;
 	std::shared_ptr<spdlog::logger> Log::s_clientLogger;
 

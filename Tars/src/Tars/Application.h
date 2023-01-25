@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Tars/Core.h>
+#include <Tars/Events/Event.h>
 
 namespace Tars {
 
