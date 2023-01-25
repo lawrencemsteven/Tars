@@ -1,12 +1,6 @@
-set(TARSAPP_INCLUDES
+include(CMakeFiles.cmake)
 
-)
-
-set(TARSAPP_SOURCES
-	"src/main.cpp"
-)
-
-add_executable(TarsApp ${TARSAPP_SOURCES} ${TARSAPP_INCLUDES})
+add_executable(TarsApp ${TARSAPP_FILES})
 
 add_dependencies(TarsApp Tars)
 
@@ -16,7 +10,7 @@ target_compile_features(TarsApp PUBLIC cxx_std_20)
 
 target_include_directories(TarsApp
 	PUBLIC
-		"include"
+		"src"
 )
 
 set_project_warnings(TarsApp)

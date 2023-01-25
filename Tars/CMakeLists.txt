@@ -1,16 +1,13 @@
 include(CMakeFiles.cmake)
 
-add_library(Tars STATIC ${TARS_FILES})
-
-source_group("Engine" FILES ${TARS_ENGINE})
-source_group("Input" FILES ${TARS_INPUT})
-source_group("VulkanUtilities" FILES ${TARS_VULKAN_UTILITIES})
-source_group("Window" FILES ${TARS_WINDOW})
+add_library(Tars SHARED ${TARS_FILES})
 
 target_compile_features(Tars PUBLIC cxx_std_20)
 
+target_compile_definitions(Tars PRIVATE TARS_BUILD_DLL)
+
 target_link_libraries(Tars
-	PUBLIC
+	PRIVATE
 		Vulkan::Vulkan
 		glm::glm
 		glfw
@@ -18,7 +15,7 @@ target_link_libraries(Tars
 
 target_include_directories(Tars
 	PUBLIC
-		"include"
+		"./src"
 )
 
 set_project_warnings(Tars)
