@@ -2,9 +2,11 @@
 
 #include <iostream>
 
+#define VK_USE_PLATFORM_WIN32_KHR
 #include <vulkan/vulkan.h>
 
 #include <Tars/VulkanUtilities/ValidationLayerInfo.h>
+#include <Tars/Window/Window.h>
 
 namespace TarsBackend {
 	class VulkanInstance {

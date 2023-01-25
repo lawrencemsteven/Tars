@@ -5,6 +5,7 @@ namespace Tars {
 
 	TarsEngine::TarsEngine(std::string_view applicationName)
 		: m_applicationName{applicationName},
+		  m_window{applicationName},
 		  m_vulkanBackend{m_applicationName} {
 		m_initialized = true;
 	}

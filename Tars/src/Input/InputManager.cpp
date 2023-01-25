@@ -14,16 +14,16 @@ namespace TarsBackend {
 	}
 
 	bool InputManager::getKeyPressed(Tars::Input::Key key) {
-		return m_keys[key].changed && m_keys[key].pressed == Tars::Input::PRESSED;
+		return m_keys[key].changed && m_keys[key].pressed == Tars::Input::TARS_PRESSED;
 	}
 
 	bool InputManager::getKeyReleased(Tars::Input::Key key) {
-		return m_keys[key].changed && m_keys[key].pressed == Tars::Input::RELEASED;
+		return m_keys[key].changed && m_keys[key].pressed == Tars::Input::TARS_RELEASED;
 	}
 
 	void InputManager::keyCallback(Tars::Input::Key key, int scancode, Tars::Input::State state,
 								   int mods) {
-		if (state == Tars::Input::REPEATED)
+		if (state == Tars::Input::TARS_REPEATED)
 			return;
 
 		m_keys[key].pressed = state;

@@ -5,14 +5,14 @@ int main() {
 	std::string_view application_name{"Tars App"};
 
 	Tars::TarsEngine tarsEngine{application_name};
-	Tars::Window window{application_name};
+	TarsBackend::Window window{application_name};
 
 	while (!window.shouldClose()) {
 		window.pollEvents();
 
-		if (window.getKeyPressed(Tars::Input::KEY_E))
-			std::cout << "E KEY PRESSED" << std::endl;
-		if (window.getKeyReleased(Tars::Input::KEY_E))
-			std::cout << "E KEY RELEASED" << std::endl;
+		if (window.getKeyPressed(Tars::Input::TARS_KEY_E))
+			std::cout << "E Pressed" << std::endl;
+		if (window.getKeyReleased(Tars::Input::TARS_KEY_E))
+			std::cout << "E Released" << std::endl;
 	}
 }

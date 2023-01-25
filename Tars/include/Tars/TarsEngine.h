@@ -1,15 +1,14 @@
 #pragma once
 
-#define GLFW_INCLUDE_VULKAN
-#include <GLFW/glfw3.h>
-
 #include <Tars/VulkanUtilities/VulkanBackend.h>
 #include <Tars/VulkanUtilities/ValidationLayerInfo.h>
+#include <Tars/Window/Window.h>
 
 namespace Tars {
 	class TarsEngine {
 	private:
 		std::string_view m_applicationName;
+		TarsBackend::Window m_window;
 		TarsBackend::VulkanBackend m_vulkanBackend;
 
 		static bool m_initialized;

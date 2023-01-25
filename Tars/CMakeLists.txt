@@ -1,25 +1,11 @@
-set(TARS_SOURCES
-	"src/TarsEngine.cpp"
-	"src/Input/InputManager.cpp"
-	"src/VulkanUtilities/ValidationLayerInfo.cpp"
-	"src/VulkanUtilities/VulkanBackend.cpp"
-	"src/VulkanUtilities/VulkanInstance.cpp"
-	"src/VulkanUtilities/VulkanDevice.cpp"
-	"src/Window/Window.cpp"
-)
+include(CMakeFiles.cmake)
 
-set(TARS_HEADERS
-	"include/Tars/TarsEngine.h"
-	"include/Tars/Input/InputManager.h"
-	"include/Tars/Input/InputTypes.h"
-	"include/Tars/VulkanUtilities/ValidationLayerInfo.h"
-	"include/Tars/VulkanUtilities/VulkanBackend.h"
-	"include/Tars/VulkanUtilities/VulkanInstance.h"
-	"include/Tars/VulkanUtilities/VulkanDevice.h"
-	"include/Tars/Window/Window.h"
-)
+add_library(Tars STATIC ${TARS_FILES})
 
-add_library(Tars STATIC ${TARS_SOURCES} ${TARS_HEADERS})
+source_group("Engine" FILES ${TARS_ENGINE})
+source_group("Input" FILES ${TARS_INPUT})
+source_group("VulkanUtilities" FILES ${TARS_VULKAN_UTILITIES})
+source_group("Window" FILES ${TARS_WINDOW})
 
 target_compile_features(Tars PUBLIC cxx_std_20)
 

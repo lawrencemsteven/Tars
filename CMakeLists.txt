@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 enable_testing()
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 include(cmake/warnings.cmake)
 
 project(Tars)

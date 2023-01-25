@@ -1,12 +1,10 @@
 #pragma once
 
-#include <GLFW/glfw3.h>
-
 #include <Tars/Input/InputManager.h>
 
 #include <iostream>
 
-namespace Tars {
+namespace TarsBackend {
 	class Window {
 	private:
 		uint32_t m_width{1280};
@@ -19,6 +17,18 @@ namespace Tars {
 	public:
 		Window(std::string_view applicationName);
 		~Window();
+
+		/**
+		 * @brief Get the required extensions for the Window for the Graphics API
+		 * @return The required extensions
+		 */
+		static std::pair<uint32_t, const char**> getRequiredExtensions();
+
+		/**
+		 * @brief Get Window Handle
+		 * @return Window Handle
+		 */
+		HWND getHWND();
 
 		/**
 		 * @brief Query whether GLFW states the window should close.

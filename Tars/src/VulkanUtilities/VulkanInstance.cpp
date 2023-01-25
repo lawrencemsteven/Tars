@@ -31,7 +31,8 @@ namespace TarsBackend {
 		createInfo.flags			= 0;
 		createInfo.pApplicationInfo = &applicationInfo;
 
-		auto extensions					   = getRequiredExtensions();
+		auto extensions = getRequiredExtensions();
+
 		createInfo.enabledExtensionCount   = static_cast<uint32_t>(extensions.size());
 		createInfo.ppEnabledExtensionNames = extensions.data();
 
@@ -108,11 +109,17 @@ namespace TarsBackend {
 	}
 
 	std::vector<const char*> VulkanInstance::getRequiredExtensions() {
-		// TODO: Add GLFW extensions as requirement.
 		std::vector<const char*> extensions{};
 
+		// Validation Layers
 		if (ValidationLayers::enabled) {
 			extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
+		}
+
+		// Window
+		std::pair<uint32_t, const char**> windowExtensions = TarsBackend::Window::getRequiredExtensions();
+		for (uint32_t i = 0; i < windowExtensions.first; i++) {
+			extensions.push_back(windowExtensions.second[i]);
 		}
 
 		return extensions;

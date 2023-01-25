@@ -1,8 +1,11 @@
 #include <Tars/Window/Window.h>
 
-namespace Tars {
+namespace TarsBackend {
 	Window::Window(std::string_view applicationName) {
 		glfwInit();
+
+		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
 		const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
@@ -28,6 +31,18 @@ namespace Tars {
 		glfwTerminate();
 	}
 
+	std::pair<uint32_t, const char**> Window::getRequiredExtensions() {
+		uint32_t glfwExtensionCount = 0;
+
+		auto glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+
+		return std::make_pair(glfwExtensionCount, glfwExtensions);
+	}
+
+	HWND Window::getHWND() {
+		return glfwGetWin32Window(m_window);
+	}
+
 	bool Window::shouldClose() {
 		return glfwWindowShouldClose(m_window);
 	}
@@ -50,6 +65,6 @@ namespace Tars {
 	}
 
 	void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-		m_inputManager.keyCallback(static_cast<Input::Key>(key), scancode, static_cast<Input::State>(action), mods);
+		m_inputManager.keyCallback(static_cast<Tars::Input::Key>(key), scancode, static_cast<Tars::Input::State>(action), mods);
 	}
 }

@@ -9,7 +9,7 @@ namespace TarsBackend {
 	class InputManager {
 	private:
 		struct KeyInfo {
-			Tars::Input::State pressed = Tars::Input::State::RELEASED;
+			Tars::Input::State pressed = Tars::Input::State::TARS_RELEASED;
 			bool changed			   = false;
 		};
 
