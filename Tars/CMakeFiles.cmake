@@ -10,6 +10,16 @@ set(TARS_EXTERNAL
     "./src/TarsPCH.h"
 )
 
+set(TARS_GRAPHICS_OPENGL
+    "./src/Graphics/OpenGL/ImGuiOpenGLRenderer.h"
+    "./src/Graphics/OpenGL/ImGuiOpenGLRenderer.cpp"
+)
+
+set(TARS_IMGUI
+    "./src/Tars/ImGui/ImGuiLayer.h"
+    "./src/Tars/ImGui/ImGuiLayer.cpp"
+)
+
 set(TARS_MAIN
     "./src/Tars/Application.h"
     "./src/Tars/Application.cpp"
@@ -29,5 +39,7 @@ set(TARS_MAIN
 set(TARS_FILES
     ${TARS_EXTERNAL}
     ${TARS_EVENTS}
+    ${TARS_GRAPHICS_OPENGL}
+    ${TARS_IMGUI}
     ${TARS_MAIN}
 )

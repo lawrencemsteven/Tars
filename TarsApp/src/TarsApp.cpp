@@ -12,7 +12,10 @@ public:
 
 class TarsApp : public Tars::Application {
 public:
-	TarsApp() { pushLayer(new ExampleLayer()); }
+	TarsApp() {
+		pushLayer(new ExampleLayer());
+		pushOverlay(new Tars::ImGuiLayer());
+	}
 
 	~TarsApp() {}
 };
