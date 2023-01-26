@@ -12,6 +12,7 @@ include(cmake/warnings.cmake)
 project(Tars)
 
 find_package(Catch2 REQUIRED)
+find_package(Glad REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
 find_package(spdlog REQUIRED)

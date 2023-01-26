@@ -5,6 +5,8 @@
 #include <Tars/Events/KeyEvent.h>
 #include <Tars/Events/MouseEvent.h>
 
+#include <glad/glad.h>
+
 namespace Tars {
 
 	static bool s_GLFWInitialized = false;
@@ -37,6 +39,8 @@ namespace Tars {
 		m_window = glfwCreateWindow((int)props.width, (int)props.height, m_data.title.c_str(),
 									nullptr, nullptr);
 		glfwMakeContextCurrent(m_window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		TARS_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_window, &m_data);
 		setVSync(true);
 

@@ -20,6 +20,10 @@ set(TARS_MAIN
     "./src/Tars/Window.h"
     "./src/Tars/WindowUsingGLFW.h"
     "./src/Tars/WindowUsingGLFW.cpp"
+    "./src/Tars/Layer.h"
+    "./src/Tars/Layer.cpp"
+    "./src/Tars/LayerStack.h"
+    "./src/Tars/LayerStack.cpp"
 )
 
 set(TARS_FILES

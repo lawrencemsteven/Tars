@@ -3,6 +3,7 @@
 // For use by Tars Applications
 
 #include <Tars/Application.h>
+#include <Tars/Layer.h>
 #include <Tars/Log.h>
 
 // --- Entry Point ------------------------

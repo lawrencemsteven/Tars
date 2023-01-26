@@ -12,13 +12,15 @@ target_compile_definitions(Tars
 	PRIVATE
 		TARS_BUILD_DLL
 		TARS_ENABLE_ASSERTS
+		GLFW_INCLUDE_NONE
 )
 
 target_link_libraries(Tars
 	PRIVATE
-		Vulkan::Vulkan
-		glm::glm
+		glad::glad
 		glfw
+		glm::glm
+		Vulkan::Vulkan
 	PUBLIC
 		spdlog::spdlog
 )

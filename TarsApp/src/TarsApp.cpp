@@ -1,16 +1,20 @@
 #include <Tars.h>
 
-class TarsApp : public Tars::Application {
+class ExampleLayer : public Tars::Layer {
 public:
-	TarsApp() {
+	ExampleLayer()
+		: Layer("Example") {}
 
-	}
+	void onUpdate() override { TARS_INFO("ExampleLayer::Update"); }
 
-	~TarsApp() {
-
-	}
+	void onEvent(Tars::Event& event) override { TARS_TRACE("{0}", event); }
 };
 
-Tars::Application* Tars::createApplication() {
-	return new TarsApp();
-}
+class TarsApp : public Tars::Application {
+public:
+	TarsApp() { pushLayer(new ExampleLayer()); }
+
+	~TarsApp() {}
+};
+
+Tars::Application* Tars::createApplication() { return new TarsApp(); }
