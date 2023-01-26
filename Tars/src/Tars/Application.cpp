@@ -1,9 +1,8 @@
+#include <TarsPCH.h>
 #include <Tars/Application.h>
 
-#include <Tars/Events/ApplicationEvent.h>
+#include <Tars/Events/KeyEvent.h>
 #include <Tars/Log.h>
-
-#include <iostream>
 
 namespace Tars {
 
@@ -14,7 +13,7 @@ namespace Tars {
 
 
 	void Application::run() {
-		WindowResizeEvent e(1280, 720);
+		KeyPressedEvent e(20, 0);
 
 		std::cout << e << std::endl;
 		TARS_CRITICAL(e);

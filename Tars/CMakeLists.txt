@@ -24,6 +24,11 @@ target_include_directories(Tars
 		"./src"
 )
 
+target_precompile_headers(Tars
+	INTERFACE
+		"./src/TarsPCH.h"
+)
+
 set_project_warnings(Tars)
 
 add_subdirectory("tests")

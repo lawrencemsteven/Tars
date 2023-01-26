@@ -2,9 +2,6 @@
 
 #include <Tars/Core.h>
 
-#include <string>
-#include <functional>
-
 namespace Tars {
 	// Events in Tars are currently blocking, meaning when an event occurs it immediately gets
 	// dispatched and must be dealt with right then and there. For the future, a better strategy
@@ -43,7 +40,7 @@ namespace Tars {
 	};
 
 #define EVENT_CLASS_TYPE(type)                                                                     \
-	static EventType getStaticType() { return EventType::type; }                                 \
+	static EventType getStaticType() { return EventType::type; }                                   \
 	virtual EventType getEventType() const override { return getStaticType(); }                    \
 	virtual const char* getName() const override { return #type; }
 

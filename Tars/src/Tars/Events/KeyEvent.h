@@ -1,7 +1,5 @@
 #pragma once
 
-#include <sstream>
-
 #include <Tars/Events/Event.h>
 
 namespace Tars {
@@ -24,7 +22,7 @@ namespace Tars {
 			  m_repeatCount(repeatCount) {}
 
 		inline int getRepeatCount() const { return m_repeatCount; }
-
+		
 		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "KeyPressedEvent: " << m_keyCode << " (" << m_repeatCount << " repeats)";

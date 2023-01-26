@@ -1,3 +1,4 @@
+#include <TarsPCH.h>
 #include <Tars/Log.h>
 
 #include <spdlog/sinks/stdout_color_sinks.h>

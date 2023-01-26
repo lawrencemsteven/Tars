@@ -1,7 +1,5 @@
 #pragma once
 
-#include <sstream>
-
 #include <Tars/Events/Event.h>
 
 namespace Tars {

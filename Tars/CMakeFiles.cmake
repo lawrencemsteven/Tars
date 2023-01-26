@@ -7,6 +7,7 @@ set(TARS_EVENTS
 
 set(TARS_EXTERNAL
     "./src/Tars.h"
+    "./src/TarsPCH.h"
 )
 
 set(TARS_MAIN

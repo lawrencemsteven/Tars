@@ -1,7 +1,5 @@
 #pragma once
 
-#include <sstream>
-
 #include <Tars/Events/Event.h>
 
 namespace Tars {
@@ -13,7 +11,7 @@ namespace Tars {
 
 		inline unsigned int getWidth() const { return m_width; }
 		inline unsigned int getHeight() const { return m_height; }
-
+		
 		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "WindowResizeEvent: " << m_width << ", " << m_height;
