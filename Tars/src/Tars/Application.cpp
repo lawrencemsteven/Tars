@@ -3,6 +3,8 @@
 
 #include <glad/glad.h>
 
+#include <Tars/Input.h>
+
 namespace Tars {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)

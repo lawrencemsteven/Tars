@@ -4,7 +4,8 @@ add_library(Tars SHARED ${TARS_FILES})
 
 target_compile_features(Tars PUBLIC cxx_std_20)
 
-source_group("Tars/Graphics/OpenGL" FILES ${TARS_GRAPHICS_OPENGL})
+source_group("Graphics/OpenGL" FILES ${TARS_GRAPHICS_OPENGL})
+source_group("Windowing/GLFW" FILES ${TARS_WINDOWING_GLFW})
 source_group("Tars/Events" FILES ${TARS_EVENTS})
 source_group("Tars/ImGui" FILES ${TARS_IMGUI})
 source_group("Tars" FILES ${TARS_MAIN})

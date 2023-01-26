@@ -1,5 +1,5 @@
 #include <TarsPCH.h>
-#include <Tars/WindowUsingGLFW.h>
+#include <Windowing/GLFW/WindowUsingGLFW.h>
 
 #include <Tars/Events/ApplicationEvent.h>
 #include <Tars/Events/KeyEvent.h>

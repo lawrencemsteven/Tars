@@ -15,6 +15,13 @@ set(TARS_GRAPHICS_OPENGL
     "./src/Graphics/OpenGL/ImGuiOpenGLRenderer.cpp"
 )
 
+set(TARS_WINDOWING_GLFW
+    "./src/Windowing/GLFW/WindowUsingGLFW.h"
+    "./src/Windowing/GLFW/WindowUsingGLFW.cpp"
+    "./src/Windowing/GLFW/GLFWInput.h"
+    "./src/Windowing/GLFW/GLFWInput.cpp"
+)
+
 set(TARS_IMGUI
     "./src/Tars/ImGui/ImGuiLayer.h"
     "./src/Tars/ImGui/ImGuiLayer.cpp"
@@ -28,18 +35,20 @@ set(TARS_MAIN
     "./src/Tars/log.h"
     "./src/Tars/log.cpp"
     "./src/Tars/Window.h"
-    "./src/Tars/WindowUsingGLFW.h"
-    "./src/Tars/WindowUsingGLFW.cpp"
     "./src/Tars/Layer.h"
     "./src/Tars/Layer.cpp"
     "./src/Tars/LayerStack.h"
     "./src/Tars/LayerStack.cpp"
+    "./src/Tars/Input.h"
+    "./src/Tars/KeyCodes.h"
+    "./src/Tars/MouseButtonCodes.h"
 )
 
 set(TARS_FILES
     ${TARS_EXTERNAL}
     ${TARS_EVENTS}
     ${TARS_GRAPHICS_OPENGL}
+    ${TARS_WINDOWING_GLFW}
     ${TARS_IMGUI}
     ${TARS_MAIN}
 )
