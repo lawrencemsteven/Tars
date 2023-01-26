@@ -8,7 +8,11 @@ source_group("Tars/Events" FILES ${TARS_EVENTS})
 source_group("Tars" FILES ${TARS_MAIN})
 source_group("" FILES ${TARS_EXTERNAL})
 
-target_compile_definitions(Tars PRIVATE TARS_BUILD_DLL)
+target_compile_definitions(Tars
+	PRIVATE
+		TARS_BUILD_DLL
+		TARS_ENABLE_ASSERTS
+)
 
 target_link_libraries(Tars
 	PRIVATE

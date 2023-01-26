@@ -17,6 +17,9 @@ set(TARS_MAIN
     "./src/Tars/EntryPoint.h"
     "./src/Tars/log.h"
     "./src/Tars/log.cpp"
+    "./src/Tars/Window.h"
+    "./src/Tars/WindowUsingGLFW.h"
+    "./src/Tars/WindowUsingGLFW.cpp"
 )
 
 set(TARS_FILES
