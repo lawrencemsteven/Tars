@@ -11,6 +11,7 @@ AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: true
 AlignTrailingComments: true
 AllowShortBlocksOnASingleLine: Always
+AllowShortCaseLabelsOnASingleLine: true
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortFunctionsOnASingleLine: All
 AlwaysBreakTemplateDeclarations: Yes
@@ -33,7 +34,7 @@ BreakConstructorInitializers: BeforeColon
 ColumnLimit: 100
 Cpp11BracedListStyle: true
 FixNamespaceComments: false
-IndentCaseLabels: false
+IndentCaseLabels: true
 IndentPPDirectives: AfterHash
 IndentWidth: 4
 MaxEmptyLinesToKeep: 10
@@ -45,6 +46,7 @@ SortIncludes: false
 SortUsingDeclarations: false
 SpaceAfterCStyleCast: false
 SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
 SpaceBeforeParens: ControlStatements
 SpaceInEmptyParentheses: false
 SpacesInCStyleCastParentheses: false
