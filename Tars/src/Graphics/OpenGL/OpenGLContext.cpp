@@ -17,6 +17,11 @@ namespace Tars {
 		glfwMakeContextCurrent(m_windowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		TARS_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		TARS_CORE_INFO("OpenGL Info:");
+		TARS_CORE_INFO("  Vendor: {0}", glGetString(GL_VENDOR));
+		TARS_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
+		TARS_CORE_INFO("  Version: {0}", glGetString(GL_VERSION));
 	}
 
 	void OpenGLContext::swapBuffers() { glfwSwapBuffers(m_windowHandle); }
