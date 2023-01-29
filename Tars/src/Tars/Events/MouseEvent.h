@@ -3,7 +3,7 @@
 #include <Tars/Events/Event.h>
 
 namespace Tars {
-	class TARS_API MouseMovedEvent : public Event {
+	class MouseMovedEvent : public Event {
 	public:
 		MouseMovedEvent(float x, float y)
 			: m_mouseX(x),
@@ -24,7 +24,7 @@ namespace Tars {
 		float m_mouseX, m_mouseY;
 	};
 
-	class TARS_API MouseScrolledEvent : public Event {
+	class MouseScrolledEvent : public Event {
 	public:
 		MouseScrolledEvent(float xOffset, float yOffset)
 			: m_xOffset(xOffset),
@@ -45,7 +45,7 @@ namespace Tars {
 		float m_xOffset, m_yOffset;
 	};
 
-	class TARS_API MouseButtonEvent : public Event {
+	class MouseButtonEvent : public Event {
 	public:
 		inline int getMouseButton() const { return m_button; }
 
@@ -57,7 +57,7 @@ namespace Tars {
 		int m_button;
 	};
 
-	class TARS_API MouseButtonPressedEvent : public MouseButtonEvent {
+	class MouseButtonPressedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonPressedEvent(int button)
 			: MouseButtonEvent(button) {}
@@ -71,7 +71,7 @@ namespace Tars {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class TARS_API MouseButtonReleasedEvent : public MouseButtonEvent {
+	class MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonReleasedEvent(int button)
 			: MouseButtonEvent(button) {}

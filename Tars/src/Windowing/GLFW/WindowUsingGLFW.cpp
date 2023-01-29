@@ -5,7 +5,7 @@
 #include <Tars/Events/KeyEvent.h>
 #include <Tars/Events/MouseEvent.h>
 
-#include <glad/glad.h>
+#include <Graphics/OpenGL/OpenGLContext.h>
 
 namespace Tars {
 
@@ -38,9 +38,10 @@ namespace Tars {
 
 		m_window = glfwCreateWindow((int)props.width, (int)props.height, m_data.title.c_str(),
 									nullptr, nullptr);
-		glfwMakeContextCurrent(m_window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		TARS_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		m_context = new OpenGLContext(m_window);
+		m_context->init();
+
 		glfwSetWindowUserPointer(m_window, &m_data);
 		setVSync(true);
 
@@ -128,7 +129,7 @@ namespace Tars {
 
 	void WindowUsingGLFW::onUpdate() {
 		glfwPollEvents();
-		glfwSwapBuffers(m_window);
+		m_context->swapBuffers();
 	}
 
 	void WindowUsingGLFW::setVSync(bool enabled) {

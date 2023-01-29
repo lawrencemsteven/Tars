@@ -3,7 +3,7 @@
 #include <Tars/Events/Event.h>
 
 namespace Tars {
-	class TARS_API KeyEvent : public Event {
+	class KeyEvent : public Event {
 	public:
 		inline int getKeyCode() const { return m_keyCode; }
 
@@ -15,7 +15,7 @@ namespace Tars {
 		int m_keyCode;
 	};
 
-	class TARS_API KeyPressedEvent : public KeyEvent {
+	class KeyPressedEvent : public KeyEvent {
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
 			: KeyEvent(keycode),
@@ -34,7 +34,7 @@ namespace Tars {
 		int m_repeatCount;
 	};
 
-	class TARS_API KeyReleasedEvent : public KeyEvent {
+	class KeyReleasedEvent : public KeyEvent {
 	public:
 		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}
@@ -48,7 +48,7 @@ namespace Tars {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class TARS_API KeyTypedEvent : public KeyEvent {
+	class KeyTypedEvent : public KeyEvent {
 	public:
 		KeyTypedEvent(int keycode)
 			: KeyEvent(keycode) {}

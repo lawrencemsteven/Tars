@@ -20,7 +20,7 @@ namespace Tars {
 	};
 
 	// Interface representing a desktop system based Window
-	class TARS_API Window {
+	class Window {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 

@@ -3,7 +3,7 @@
 #include <Tars/Events/Event.h>
 
 namespace Tars {
-	class TARS_API WindowResizeEvent : public Event {
+	class WindowResizeEvent : public Event {
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height)
 			: m_width(width),
@@ -24,7 +24,7 @@ namespace Tars {
 		unsigned int m_width, m_height;
 	};
 
-	class TARS_API WindowCloseEvent : public Event {
+	class WindowCloseEvent : public Event {
 	public:
 		WindowCloseEvent() {}
 
@@ -32,14 +32,14 @@ namespace Tars {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class TARS_API AppTickEvent : public Event {
+	class AppTickEvent : public Event {
 		AppTickEvent() {}
 
 		EVENT_CLASS_TYPE(AppTick)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class TARS_API AppUpdateEvent : public Event {
+	class AppUpdateEvent : public Event {
 	public:
 		AppUpdateEvent() {}
 
@@ -47,7 +47,7 @@ namespace Tars {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class TARS_API AppRenderEvent : public Event {
+	class AppRenderEvent : public Event {
 	public:
 		AppRenderEvent() {}
 

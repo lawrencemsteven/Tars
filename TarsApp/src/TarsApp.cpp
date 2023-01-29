@@ -1,16 +1,20 @@
 #include <Tars.h>
 
+#include <imgui.h>
+
 class ExampleLayer : public Tars::Layer {
 public:
 	ExampleLayer()
 		: Layer("Example") {}
 
-	void onUpdate() override {
+	virtual void onUpdate() override {
 		if (Tars::Input::isKeyPressed(TARS_KEY_TAB)) TARS_TRACE("TAB KEY IS PRESSED");
 	}
 
-	void onEvent(Tars::Event& event) override {
-		// TARS_TRACE("{0}", event);
+	virtual void onImGuiRender() override {
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World!");
+		ImGui::End();
 	}
 };
 
@@ -18,7 +22,6 @@ class TarsApp : public Tars::Application {
 public:
 	TarsApp() {
 		pushLayer(new ExampleLayer());
-		pushOverlay(new Tars::ImGuiLayer());
 	}
 
 	~TarsApp() {}

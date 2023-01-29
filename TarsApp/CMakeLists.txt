@@ -12,5 +12,3 @@ target_include_directories(TarsApp
 	PUBLIC
 		"src"
 )
-
-set_project_warnings(TarsApp)

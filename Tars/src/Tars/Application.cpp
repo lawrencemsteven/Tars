@@ -17,6 +17,9 @@ namespace Tars {
 
 		m_window = std::unique_ptr<Window>(Window::create());
 		m_window->setEventCallback(BIND_EVENT_FN(onEvent));
+
+		m_imGuiLayer = new ImGuiLayer();
+		pushOverlay(m_imGuiLayer);
 	}
 
 
@@ -25,13 +28,11 @@ namespace Tars {
 
 	void Application::pushLayer(Layer* layer) {
 		m_layerStack.pushLayer(layer);
-		layer->onAttach();
 	}
 
 
 	void Application::pushOverlay(Layer* layer) {
 		m_layerStack.pushOverlay(layer);
-		layer->onAttach();
 	}
 
 
@@ -53,6 +54,11 @@ namespace Tars {
 
 			for (Layer* layer : m_layerStack)
 				layer->onUpdate();
+
+			m_imGuiLayer->begin();
+			for (Layer* layer : m_layerStack)
+				layer->onImGuiRender();
+			m_imGuiLayer->end();
 
 			m_window->onUpdate();
 		};

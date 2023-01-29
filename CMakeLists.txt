@@ -7,8 +7,6 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-include(cmake/warnings.cmake)
-
 project(Tars)
 
 find_package(Catch2 REQUIRED)
@@ -21,3 +19,5 @@ find_package(Vulkan REQUIRED)
 
 add_subdirectory("Tars")
 add_subdirectory("TarsApp")
+
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT TarsApp)

@@ -2,6 +2,7 @@
 
 
 #include <Tars/Window.h>
+#include <Tars/Renderer/GraphicsContext.h>
 
 #include <GLFW/glfw3.h>
 
@@ -32,6 +33,7 @@ namespace Tars {
 
 	private:
 		GLFWwindow* m_window;
+		GraphicsContext* m_context;
 
 		struct WindowData {
 			std::string title;

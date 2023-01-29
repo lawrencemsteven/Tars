@@ -7,9 +7,11 @@
 #include <Tars/Events/Event.h>
 #include <Tars/Events/ApplicationEvent.h>
 
+#include <Tars/ImGui/ImGuiLayer.h>
+
 namespace Tars {
 
-	class TARS_API Application {
+	class Application {
 	public:
 		Application();
 		virtual ~Application();
@@ -28,6 +30,7 @@ namespace Tars {
 		bool onWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_window;
+		ImGuiLayer* m_imGuiLayer;
 		bool m_running = true;
 		LayerStack m_layerStack;
 
