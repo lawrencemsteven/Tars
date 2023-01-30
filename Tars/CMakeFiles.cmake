@@ -14,6 +14,10 @@ set(TARS_RENDERER
     "./src/Tars/Renderer/GraphicsContext.h"
     "./src/Tars/Renderer/Shader.h"
     "./src/Tars/Renderer/Shader.cpp"
+    "./src/Tars/Renderer/Buffer.h"
+    "./src/Tars/Renderer/Buffer.cpp"
+    "./src/Tars/Renderer/Renderer.h"
+    "./src/Tars/Renderer/Renderer.cpp"
 )
 
 set(TARS_WINDOWING_GLFW
@@ -26,6 +30,8 @@ set(TARS_WINDOWING_GLFW
 set(TARS_GRAPHICS_OPENGL
     "./src/Graphics/OpenGL/OpenGLContext.h"
     "./src/Graphics/OpenGL/OpenGLContext.cpp"
+    "./src/Graphics/OpenGL/OpenGLBuffer.h"
+    "./src/Graphics/OpenGL/OpenGLBuffer.cpp"
 )
 
 set(TARS_IMGUI

@@ -10,6 +10,7 @@
 #include <Tars/ImGui/ImGuiLayer.h>
 
 #include <Tars/Renderer/Shader.h>
+#include <Tars/Renderer/Buffer.h>
 
 namespace Tars {
 
@@ -36,8 +37,10 @@ namespace Tars {
 		bool m_running = true;
 		LayerStack m_layerStack;
 
-		unsigned int m_vertexArray, m_vertexBuffer, m_indexBuffer;
+		unsigned int m_vertexArray;
 		std::unique_ptr<Shader> m_shader;
+		std::unique_ptr<VertexBuffer> m_vertexBuffer;
+		std::unique_ptr<IndexBuffer> m_indexBuffer;
 
 	private:
 		static Application* s_instance;
