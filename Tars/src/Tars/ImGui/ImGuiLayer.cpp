@@ -47,7 +47,7 @@ namespace Tars {
 
 		// Setup Platform/Renderer bindings
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
-		ImGui_ImplOpenGL3_Init("#version 460");
+		ImGui_ImplOpenGL3_Init("#version 450");
 	}
 
 	void ImGuiLayer::onDetach() {

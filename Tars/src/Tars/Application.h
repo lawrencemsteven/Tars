@@ -9,6 +9,8 @@
 
 #include <Tars/ImGui/ImGuiLayer.h>
 
+#include <Tars/Renderer/Shader.h>
+
 namespace Tars {
 
 	class Application {
@@ -35,6 +37,7 @@ namespace Tars {
 		LayerStack m_layerStack;
 
 		unsigned int m_vertexArray, m_vertexBuffer, m_indexBuffer;
+		std::unique_ptr<Shader> m_shader;
 
 	private:
 		static Application* s_instance;

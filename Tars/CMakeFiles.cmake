@@ -12,6 +12,8 @@ set(TARS_EXTERNAL
 
 set(TARS_RENDERER
     "./src/Tars/Renderer/GraphicsContext.h"
+    "./src/Tars/Renderer/Shader.h"
+    "./src/Tars/Renderer/Shader.cpp"
 )
 
 set(TARS_WINDOWING_GLFW
