@@ -43,7 +43,7 @@ namespace Tars {
 		m_context->init();
 
 		glfwSetWindowUserPointer(m_window, &m_data);
-		setVSync(true);
+		setVSync(false);
 
 		// Set GLFW callbacks
 		glfwSetWindowSizeCallback(m_window, [](GLFWwindow* window, int width, int height) {

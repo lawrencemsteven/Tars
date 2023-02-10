@@ -16,8 +16,6 @@ target_compile_definitions(Tars
 	PRIVATE
 		TARS_DEBUG
 		GLFW_INCLUDE_NONE
-
-		_CRT_SECURE_NO_WARNINGS
 )
 
 target_link_libraries(Tars

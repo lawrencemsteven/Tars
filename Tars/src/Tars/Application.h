@@ -41,6 +41,7 @@ namespace Tars {
 		std::unique_ptr<Shader> m_shader;
 		std::unique_ptr<VertexBuffer> m_vertexBuffer;
 		std::unique_ptr<IndexBuffer> m_indexBuffer;
+		unsigned int m_computeProgram, m_texture0;
 
 	private:
 		static Application* s_instance;
