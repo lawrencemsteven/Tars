@@ -1,9 +1,9 @@
 #include <TarsPCH.h>
-#include <Tars/Application.h>
+#include <Tars/Main/Application.h>
 
 #include <glad/glad.h>
 
-#include <Tars/Input.h>
+#include <Tars/Input/Input.h>
 
 namespace Tars {
 

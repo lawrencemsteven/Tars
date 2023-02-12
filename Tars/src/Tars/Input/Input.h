@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Tars/Core.h>
+#include <Tars/Main/Core.h>
 
 namespace Tars {
 

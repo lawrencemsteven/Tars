@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Tars/Core.h>
-#include <Tars/Layer.h>
+#include <Tars/Main/Core.h>
+#include <Tars/Layers/Layer.h>
 
 namespace Tars {
 

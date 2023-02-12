@@ -2,6 +2,10 @@
 
 #include <imgui.h>
 
+class GrassBlock : public Tars::Item {
+
+};
+
 class ExampleLayer : public Tars::Layer {
 public:
 	ExampleLayer()

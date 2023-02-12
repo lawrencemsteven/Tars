@@ -4,7 +4,7 @@
 #include <imgui.h>
 #include <Tars/ImGui/ImGuiBuild.h>
 
-#include <Tars/Application.h>
+#include <Tars/Main/Application.h>
 
 // TEMPORARY
 #include <GLFW/glfw3.h>
@@ -56,10 +56,7 @@ namespace Tars {
 		ImGui::DestroyContext();
 	}
 
-	void ImGuiLayer::onImGuiRender() {
-		static bool show = true;
-		ImGui::ShowDemoWindow(&show);
-	}
+	void ImGuiLayer::onImGuiRender() {}
 
 	void ImGuiLayer::begin() {
 		ImGui_ImplOpenGL3_NewFrame();

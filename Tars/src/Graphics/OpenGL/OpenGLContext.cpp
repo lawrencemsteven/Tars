@@ -7,7 +7,7 @@
 #include <glad/glad.h>
 
 namespace Tars {
-
+	
 	OpenGLContext::OpenGLContext(GLFWwindow* windowHandle)
 		: m_windowHandle(windowHandle) {
 		TARS_CORE_ASSERT(windowHandle, "Window handle is null!")

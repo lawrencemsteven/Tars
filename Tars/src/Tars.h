@@ -2,16 +2,18 @@
 
 // For use by Tars Applications
 
-#include <Tars/Application.h>
-#include <Tars/Layer.h>
-#include <Tars/Log.h>
+#include <Tars/Main/Application.h>
+#include <Tars/Layers/Layer.h>
+#include <Tars/Logging/Log.h>
 
-#include <Tars/Input.h>
-#include <Tars/KeyCodes.h>
-#include <Tars/MouseButtonCodes.h>
+#include <Tars/Input/Input.h>
+#include <Tars/Input/KeyCodes.h>
+#include <Tars/Input/MouseButtonCodes.h>
+
+#include <Tars/Items/Item.h>
 
 #include <Tars/ImGui/ImGuiLayer.h>
 
 // --- Entry Point ------------------------
-#include <Tars/EntryPoint.h>
+#include <Tars/Main/EntryPoint.h>
 // ----------------------------------------

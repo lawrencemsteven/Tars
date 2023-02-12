@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include <Tars/Log.h>
+#include <Tars/Logging/Log.h>
 
 #ifdef _MSC_VER
 #	include <Windows.h>

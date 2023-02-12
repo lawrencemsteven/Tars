@@ -2,7 +2,7 @@
 
 #include <TarsPCH.h>
 
-#include <Tars/Core.h>
+#include <Tars/Main/Core.h>
 #include <Tars/Events/Event.h>
 
 namespace Tars {
@@ -12,8 +12,8 @@ namespace Tars {
 		unsigned int width;
 		unsigned int height;
 
-		WindowProps(const std::string& title = "Tars Engine", unsigned int width = 3440,
-					unsigned int height = 1440)
+		WindowProps(const std::string& title = "Tars Engine", unsigned int width = 1280,
+					unsigned int height = 720)
 			: title(title),
 			  width(width),
 			  height(height) {}

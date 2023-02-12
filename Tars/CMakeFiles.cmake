@@ -40,21 +40,45 @@ set(TARS_IMGUI
     "./src/Tars/ImGui/ImGuiBuild.cpp"
 )
 
+set(TARS_LAYERS
+    "./src/Tars/Layers/Layer.h"
+    "./src/Tars/Layers/Layer.cpp"
+    "./src/Tars/Layers/LayerStack.h"
+    "./src/Tars/Layers/LayerStack.cpp"
+)
+
+set(TARS_LOGGING
+    "./src/Tars/Logging/log.h"
+    "./src/Tars/Logging/log.cpp"
+)
+
+set(TARS_INPUT
+    "./src/Tars/Input/Input.h"
+    "./src/Tars/Input/KeyCodes.h"
+    "./src/Tars/Input/MouseButtonCodes.h"
+)
+
 set(TARS_MAIN
-    "./src/Tars/Application.h"
-    "./src/Tars/Application.cpp"
-    "./src/Tars/Core.h"
-    "./src/Tars/EntryPoint.h"
-    "./src/Tars/log.h"
-    "./src/Tars/log.cpp"
-    "./src/Tars/Window.h"
-    "./src/Tars/Layer.h"
-    "./src/Tars/Layer.cpp"
-    "./src/Tars/LayerStack.h"
-    "./src/Tars/LayerStack.cpp"
-    "./src/Tars/Input.h"
-    "./src/Tars/KeyCodes.h"
-    "./src/Tars/MouseButtonCodes.h"
+    "./src/Tars/Main/Application.h"
+    "./src/Tars/Main/Application.cpp"
+    "./src/Tars/Main/Core.h"
+    "./src/Tars/Main/EntryPoint.h"
+    "./src/Tars/Main/Window.h"
+)
+
+set(TARS_ITEMS
+    "./src/Tars/Items/Item.h"
+    "./src/Tars/Items/Item.cpp"
+)
+
+set(TARS_VOXEL_CHUNK
+    "./src/Tars/Voxel/Chunk/Chunk.h"
+    "./src/Tars/Voxel/Chunk/Chunk.cpp"
+)
+
+set(TARS_VOXEL_BLOCKS
+    "./src/Tars/Voxel/Blocks/Block.h"
+    "./src/Tars/Voxel/Blocks/Block.cpp"
 )
 
 set(TARS_FILES
@@ -64,5 +88,11 @@ set(TARS_FILES
     ${TARS_WINDOWING_GLFW}
     ${TARS_GRAPHICS_OPENGL}
     ${TARS_IMGUI}
+    ${TARS_LAYERS}
+    ${TARS_LOGGING}
+    ${TARS_INPUT}
     ${TARS_MAIN}
+    ${TARS_ITEMS}
+    ${TARS_VOXEL_CHUNK}
+    ${TARS_VOXEL_BLOCKS}
 )

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Tars/Input.h>
+#include <Tars/Input/Input.h>
 
 namespace Tars {
 	class GLFWInput : public Input {

@@ -1,9 +1,9 @@
 #pragma once
 
-#include <Tars/Core.h>
+#include <Tars/Main/Core.h>
 
-#include <Tars/Window.h>
-#include <Tars/LayerStack.h>
+#include <Tars/Main/Window.h>
+#include <Tars/Layers/LayerStack.h>
 #include <Tars/Events/Event.h>
 #include <Tars/Events/ApplicationEvent.h>
 

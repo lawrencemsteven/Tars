@@ -2,7 +2,7 @@
 #include <Windowing/GLFW/GLFWInput.h>
 
 #include <GLFW/glfw3.h>
-#include <Tars/Application.h>
+#include <Tars/Main/Application.h>
 
 namespace Tars {
 

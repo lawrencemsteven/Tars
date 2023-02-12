@@ -3,7 +3,7 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 
-#include <Tars/Core.h>
+#include <Tars/Main/Core.h>
 
 namespace Tars {
 	class Log {
